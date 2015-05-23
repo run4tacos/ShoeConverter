@@ -13,7 +13,8 @@ class ViewController: UIViewController {
 
     @IBOutlet weak var mensConvertedShoeSizeLabel: UILabel!
     @IBOutlet weak var menShoeSizeTextField: UITextField!
-    
+    @IBOutlet weak var womensConvertedShoeSizeLabel: UILabel!
+    @IBOutlet weak var womensShoeSizeTextField: UITextField!
     
     
     
@@ -36,5 +37,17 @@ class ViewController: UIViewController {
     
     }
 
+    @IBAction func womensConvertButtonPressed(sender: UIButton) {
+        let sizeFromTextField = Double((womensShoeSizeTextField.text as NSString).doubleValue)
+        let constantConversion:Double = 30.5
+        womensConvertedShoeSizeLabel.hidden = false
+        womensConvertedShoeSizeLabel.text = "\(sizeFromTextField + constantConversion)" + " in European sizes"
+    
+    
+    }
+
+    
+    
+    
 }
 
